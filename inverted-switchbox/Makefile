@@ -37,9 +37,9 @@ clean:
 # --------------------------------------------------------------
 
 install: build
-	install -d $(DESTDIR)$(PREFIX)/lib/lv2/$(NAME).lv2
+	install -d $(COMPLETE_INSTALL_PATH)
 
-	install -m 644 $(NAME).lv2/*.so  $(DESTDIR)$(PREFIX)/lib/lv2/$(NAME).lv2/
-	install -m 644 $(NAME).lv2/*.ttl $(DESTDIR)$(PREFIX)/lib/lv2/$(NAME).lv2/
+	install -m 644 $(NAME).lv2/*.so  $(COMPLETE_INSTALL_PATH)/
+	install -m 644 $(NAME).lv2/*.ttl $(COMPLETE_INSTALL_PATH)/
 
 # --------------------------------------------------------------
