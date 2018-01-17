@@ -41,5 +41,6 @@ install: build
 
 	install -m 644 $(NAME).lv2/*.so  $(COMPLETE_INSTALL_PATH)/
 	install -m 644 $(NAME).lv2/*.ttl $(COMPLETE_INSTALL_PATH)/
+	cp -r $(NAME).lv2/modgui $(COMPLETE_INSTALL_PATH)/
 
 # --------------------------------------------------------------
