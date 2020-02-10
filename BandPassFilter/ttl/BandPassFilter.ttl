@@ -27,6 +27,8 @@ doap:maintainer [
 
 mod:brand "MOD";
 mod:label "BandPassFilter";
+    lv2:minorVersion 0;
+    lv2:microVersion 0;
 
 doap:license "GPL";
 
@@ -42,21 +44,21 @@ lv2:port
     lv2:index 0;
     lv2:symbol "In";
     lv2:name "In";
-    lv2:shortname "In";
+    lv2:shortName "In";
 ],
 [
     a lv2:AudioPort, lv2:OutputPort;
     lv2:index 1;
     lv2:symbol "Out";
     lv2:name "Out";
-    lv2:shortname "Out";
+    lv2:shortName "Out";
 ],
 [
     a lv2:ControlPort, lv2:InputPort;
     lv2:index 2;
     lv2:symbol "Freq";
     lv2:name "Freq";
-    lv2:shortname "Freq";
+    lv2:shortName "Freq";
     lv2:portProperty epp:logarithmic;
     lv2:default 600.0;
     lv2:minimum 200.0;
@@ -68,7 +70,7 @@ lv2:port
     lv2:index 3;
     lv2:symbol "Q";
     lv2:name "Q";
-    lv2:shortname "Q";
+    lv2:shortName "Q";
     lv2:default 0.707;
     lv2:minimum 0.707;
     lv2:maximum 5.0;
@@ -78,7 +80,7 @@ lv2:port
     lv2:index 4;
     lv2:symbol "Order";
     lv2:name "Order";
-    lv2:shortname "Order";
+    lv2:shortName "Order";
     lv2:portProperty lv2:integer, lv2:enumeration;
     lv2:scalePoint [rdfs:label "1"; rdf:value 0];
     lv2:scalePoint [rdfs:label "2"; rdf:value 1];
@@ -89,10 +91,11 @@ lv2:port
 ];
 
 modgui:gui [
+    modgui:brand "MOD";
+    modgui:label "BandPassFilter";
     modgui:resourcesDirectory <modgui>;
     modgui:iconTemplate <modgui/icon-bandpassfilter.html>;
     modgui:stylesheet <modgui/stylesheet-bandpassfilter.css>;
-    modgui:templateData <modgui/data-bandpassfilter.json>;
     modgui:screenshot <modgui/screenshot-bandpassfilter.png>;
     modgui:thumbnail <modgui/thumb-bandpassfilter.png>;
 ].

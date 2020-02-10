@@ -24,11 +24,19 @@ doap:maintainer [
 
 mod:brand "MOD";
 mod:label "Gain";
+    lv2:minorVersion 1;
+    lv2:microVersion 0;
 
 doap:license "GPL";
 
 rdfs:comment """
-Simple volume gain plugin without "zipping" noise while messing with the gain parameter.
+
+Simple mono volume gain plugin without "zipping" noise when messing around with the gain parameter.
+Also available in a stereo version.
+
+Features:
+Modeled by MOD Devices
+
 """;
 
 lv2:port
@@ -37,22 +45,22 @@ lv2:port
     lv2:index 0;
     lv2:symbol "In";
     lv2:name "In";
-    lv2:shortname "In";
+    lv2:shortName "In";
 ],
 [
     a lv2:AudioPort, lv2:OutputPort;
     lv2:index 1;
     lv2:symbol "Out";
     lv2:name "Out";
-    lv2:shortname "Out";
+    lv2:shortName "Out";
 ],
 [
     a lv2:ControlPort, lv2:InputPort;
     lv2:index 2;
     lv2:symbol "Gain";
-    lv2:name "Gain";
-    lv2:shortname "Gain";
-    lv2:default 3.0;
+    lv2:name "Level";
+    lv2:shortName "Level";
+    lv2:default 0.0;
     lv2:minimum -40.0;
     lv2:maximum 40.0;
     units:unit units:db ;
